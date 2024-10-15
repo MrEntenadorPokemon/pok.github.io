@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Curriculum Vitae</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
+        <div class="header-content">
+            <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
+        <h1>Andre Siqueiros Perez</h1>
+    </div>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Me</a>
@@ -17,48 +21,63 @@
     </header>
 
     <section id="profile">
-        <h2>Profile</h2>
-        <p>Brief description about yourself, your career goals, and your skills.</p>
+        <h2>Perfil</h2>
+        <p>
+        </p>
     </section>
 
     <section id="experience">
-        <h2>Experience</h2>
+        <h2>Experiencia</h2>
+        
         <div class="job">
-            <h3>Job Title</h3>
-            <p><strong>Company Name</strong> - (Start Date - End Date)</p>
-            <p>Short description of your role and responsibilities.</p>
+            <h3>Mesero</h3>
+            <p><strong>Stromboli</strong> - (12/July/2023 - 7/August/2023)</p>
+            <p>Fui mesero de dicho restaurante.</p>
         </div>
         <div class="job">
-            <h3>Another Job Title</h3>
-            <p><strong>Company Name</strong> - (Start Date - End Date)</p>
-            <p>Short description of your role and responsibilities.</p>
+            <h3>Despacho</h3>
+            <p><strong>Abarrey</strong> - (1/Junio/2024 - 7/July/2024)</p>
+            <p>Fui despacho dentro de un super. Cortando, preparando y empaquetando diferentes tipos de carnes para vender dentro de dicho super.</p>
+        </div>
+        <div class="job"> 
+            <h3>Desarrollador Web</h3>
+            <p><strong>SPConsultores</strong> - (14/Mayo/2018 - Hasta la Fecha)</p>
+            <p>Me dedico un poco al arreglo de lo que serian las paginas web, añado de bases de datos e informacion sobre dichos softwares para
+                una empresa dedicada al manejo de instituciones.
         </div>
     </section>
 
     <section id="education">
-        <h2>Education</h2>
-        <p><strong>Degree, Major</strong></p>
-        <p>University Name, Graduation Year</p>
+        <h2>Educacion</h2>
+        <p><strong>Ingenieria en Sistemas de Informacion</strong></p>
+        <p>Universidad de Sonora, 2026?</p>
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
-            <li>Skill 3</li>
+            <li>Bases de Datos y manejor de MySQL</li>
+            <li>Programacion de varios lenguajes (Java, CSS)</li>
+            <li>Poco de Liderazgo </li>
+            <li>Dedicacion e Investigacion</li>
         </ul>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-        <p>Phone: +123456789</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">Your Profile</a></p>
+        <p>Email: andresiqueiros29@gmail.com</p>
+        <p>Phone: +52 5629629273</p>
+        <p>LinkedIn: <a href="www.linkedin.com/in/andre-siqueiros-42a965332">Your Profile</a></p>
+        <p>VideoCurriculum: <a href="">Link</a></p>
     </section>
 
+    <a href="#" id="download-pdf" class="btn btn-primary" style="margin-left: 10px;">Save as PDF</a>
+
     <footer>
-        <p>© 2024 Your Name. All rights reserved.</p>
+    <p>© 2024 Andre Siqueiros Perez</P> 
+    <p> All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
