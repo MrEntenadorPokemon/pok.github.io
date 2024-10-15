@@ -1,21 +1,30 @@
 document.addEventListener("DOMContentLoaded", function() {
     const pdfButton = document.getElementById('download-pdf');
-    
+
     pdfButton.addEventListener('click', function(event) {
         event.preventDefault();
-        
-        const { jsPDF } = window.jspdf;
-        
-        const doc = new jsPDF();
 
-        const content = document.body.innerHTML;
+        const currentContent = document.body.cloneNode(true);
 
-        doc.html(content, {
-            callback: function (doc) {
-                doc.save('Andre Siqueiros Perez CV pdf');
-            },
-            x: 10,
-            y: 10
-        });
+        fetch('about.html')
+            .then(response => response.text())
+            .then(data => {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = data;
+
+                currentContent.appendChild(tempDiv);
+
+                html2pdf()
+                    .from(currentContent)
+                    .set({
+                        margin: 1,
+                        filename: 'Curriculum_Vitae.pdf',
+                        image: { type: 'jpeg', quality: 0.98 },
+                        html2canvas: { scale: 2 },
+                        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                    })
+                    .save();
+            })
+            .catch(error => console.error('Error al juntar los html.:', error));
     });
 });
